@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace biblioteca1
 {
-    public class user2
+    public class Logim
     {
-        public String nombre { get; set; }
-        public String clave { get; set; }
+        public string rol { get; set; }
+        public string usuario { get; set; }
+        public string contraseña { get; set; }
     }
 }

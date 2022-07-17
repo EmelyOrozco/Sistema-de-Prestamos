@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using biblioteca1;
 using biblioteca2;
-using biblioteca1;
 using System.Data;
 
 namespace biblioteca3
@@ -14,9 +8,9 @@ namespace biblioteca3
     {
         user objd = new user();
 
-        public DataTable userz(user2 obje)
+        public Logim userz(string rol, string usuario, string clave)
         {
-            return objd.users(obje);
+            return objd.Login(rol, usuario,clave);
         }
     }
 }

@@ -1,39 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using biblioteca1;
+using biblioteca2;
+using System;
 using System.Windows.Forms;
-
-using biblioteca1;
-using biblioteca3;
 
 namespace form4
 {
     public partial class Form1 : Form
     {
-        user2 objeuserr = new user2();
-        user3 objeuser = new user3();
+        Logim objeuserr = new Logim();
+        user user = new user();
         Form2 fmr1 = new Form2();
 
         public static string usuario_nombre;
+        public static string rol;
 
 
         void logueo_p()
         {
-            DataTable dt = new DataTable();
-            objeuserr.nombre = textusuario.Text;
-            objeuserr.clave = textpass.Text;
+            objeuserr.usuario = textusuario.Text;
+            objeuserr.contraseña = textpass.Text;
+            objeuserr.rol = txtRol.Text;
 
-            dt = objeuser.userz(objeuserr);
+            var dt = user.users(objeuserr);
 
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Bienvenido " + dt.Rows[0][0].ToString(), "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                usuario_nombre = dt.Rows[0][0].ToString();
+                MessageBox.Show("Bienvenido " + dt.Rows[0][1].ToString(), "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                usuario_nombre = dt.Rows[0][1].ToString();
 
                 fmr1.ShowDialog();
 

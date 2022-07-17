@@ -14,16 +14,35 @@ namespace biblioteca2
     {
 
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
-        public DataTable users(user2 obje)
+        public DataTable users(Logim obje)
         {
-            SqlCommand cmd = new SqlCommand("Logueo_intro", conn);
+            SqlCommand cmd = new SqlCommand("Logeo", conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@nombre",obje.nombre);
-            cmd.Parameters.AddWithValue("@clave",obje.clave);
+            cmd.Parameters.AddWithValue("@usuario", obje.usuario);
+            cmd.Parameters.AddWithValue("@rol", obje.rol);
+            cmd.Parameters.AddWithValue("@clave", obje.contraseña);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
+        }
+
+
+
+        public void InsertarUsuarios(Usuarios user)
+        {
+
+            SqlCommand cmd = new SqlCommand("CrearUsuario", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            conn.Open();
+            cmd.Parameters.AddWithValue("@id", user.Id);
+            cmd.Parameters.AddWithValue("@nombre_completo", user.Nombre_Completo);
+            cmd.Parameters.AddWithValue("@usuario", user.Usuario);
+            cmd.Parameters.AddWithValue("@rol", user.Rol);
+            cmd.Parameters.AddWithValue("@clave", user.Clave);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
         }
     }
 }
