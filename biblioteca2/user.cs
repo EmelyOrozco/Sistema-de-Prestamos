@@ -44,5 +44,21 @@ namespace biblioteca2
             conn.Close();
 
         }
+        public void Insertarprestamos(Prestamos user)
+        {
+
+            SqlCommand cmd = new SqlCommand("CrearPrestamo", conn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            conn.Open();
+            cmd.Parameters.AddWithValue("@ClienteId", user.ClienteId);
+            cmd.Parameters.AddWithValue("@CantidadSolicitada", user.CantidadSOlicitada);
+            cmd.Parameters.AddWithValue("@Tasa", user.Tasa);
+            cmd.Parameters.AddWithValue("@CantidadMeses", user.CantidadMeses);
+            cmd.Parameters.AddWithValue("@Estado", user.Estado);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

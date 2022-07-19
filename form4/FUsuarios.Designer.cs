@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.prestamosDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRESTAMOSDataSet = new form4.PRESTAMOSDataSet();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new form4.PRESTAMOSDataSetTableAdapters.UsuariosTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrecompletoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRESTAMOSDataSet = new form4.PRESTAMOSDataSet();
+            this.prestamosDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new form4.PRESTAMOSDataSetTableAdapters.UsuariosTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prestamosDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRESTAMOSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRESTAMOSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamosDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -59,22 +59,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(726, 274);
+            this.dataGridView1.Size = new System.Drawing.Size(663, 274);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // pRESTAMOSDataSet
-            // 
-            this.pRESTAMOSDataSet.DataSetName = "PRESTAMOSDataSet";
-            this.pRESTAMOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.pRESTAMOSDataSet;
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -108,6 +94,20 @@
             this.usuarioDataGridViewTextBoxColumn.Name = "usuarioDataGridViewTextBoxColumn";
             this.usuarioDataGridViewTextBoxColumn.Width = 150;
             // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.pRESTAMOSDataSet;
+            // 
+            // pRESTAMOSDataSet
+            // 
+            this.pRESTAMOSDataSet.DataSetName = "PRESTAMOSDataSet";
+            this.pRESTAMOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(27, 354);
@@ -118,21 +118,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Usuarios
+            // FUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Usuarios";
+            this.Name = "FUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Listado de Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prestamosDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRESTAMOSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRESTAMOSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamosDataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

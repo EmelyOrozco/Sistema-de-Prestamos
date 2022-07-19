@@ -23,5 +23,12 @@ namespace form4
             this.prestamosTableAdapter.Fill(this.pRESTAMOSDataSet.Prestamos);
 
         }
+
+ 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CrearPrestamo user = new CrearPrestamo();
+            user.ShowDialog();
+        }
     }
 }

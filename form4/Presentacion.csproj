@@ -52,6 +52,12 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearPrestamo.Designer.cs">
+      <DependentUpon>CrearPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearPrestamo.resx">
+      <DependentUpon>CrearPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearUser.resx">
       <DependentUpon>CrearUser.cs</DependentUpon>

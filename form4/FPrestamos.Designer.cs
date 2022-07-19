@@ -30,18 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pRESTAMOSDataSet = new form4.PRESTAMOSDataSet();
-            this.prestamosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.prestamosTableAdapter = new form4.PRESTAMOSDataSetTableAdapters.PrestamosTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadSolicitadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tasaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadMesesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prestamosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRESTAMOSDataSet = new form4.PRESTAMOSDataSet();
+            this.prestamosTableAdapter = new form4.PRESTAMOSDataSetTableAdapters.PrestamosTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRESTAMOSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRESTAMOSDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -61,22 +62,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1048, 289);
+            this.dataGridView1.Size = new System.Drawing.Size(961, 289);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // pRESTAMOSDataSet
-            // 
-            this.pRESTAMOSDataSet.DataSetName = "PRESTAMOSDataSet";
-            this.pRESTAMOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // prestamosBindingSource
-            // 
-            this.prestamosBindingSource.DataMember = "Prestamos";
-            this.prestamosBindingSource.DataSource = this.pRESTAMOSDataSet;
-            // 
-            // prestamosTableAdapter
-            // 
-            this.prestamosTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -127,19 +114,44 @@
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
             this.estadoDataGridViewTextBoxColumn.Width = 150;
             // 
+            // prestamosBindingSource
+            // 
+            this.prestamosBindingSource.DataMember = "Prestamos";
+            this.prestamosBindingSource.DataSource = this.pRESTAMOSDataSet;
+            // 
+            // pRESTAMOSDataSet
+            // 
+            this.pRESTAMOSDataSet.DataSetName = "PRESTAMOSDataSet";
+            this.pRESTAMOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // prestamosTableAdapter
+            // 
+            this.prestamosTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 403);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(282, 35);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Agregar solicitud prestamo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FPrestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FPrestamos";
             this.Load += new System.EventHandler(this.FPrestamos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRESTAMOSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRESTAMOSDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,5 +168,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tasaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadMesesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

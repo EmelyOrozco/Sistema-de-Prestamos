@@ -15,11 +15,12 @@ namespace form4
         public Form2()
         {
             InitializeComponent();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //if (Form1.rol == "A0001")
+            //if (Form1.rol == "admin")
             //{
             //    btnalmacen.Enabled = true;
             //    btnventas.Enabled = true;
@@ -33,7 +34,6 @@ namespace form4
         {
             Clientes clientes = new Clientes();
             clientes.ShowDialog();
-
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)

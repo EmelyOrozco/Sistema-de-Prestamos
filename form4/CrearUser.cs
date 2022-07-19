@@ -41,5 +41,15 @@ namespace form4
                 MessageBox.Show("No se pudo guardar el registro" + ex);
             }
         }
+
+        private void CrearUser_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearUser_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
